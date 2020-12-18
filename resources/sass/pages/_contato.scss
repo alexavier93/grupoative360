@@ -1,0 +1,65 @@
+#contato {
+    position: relative;
+
+    .content {
+        padding: 40px 0;
+
+        .form {
+
+            h5 {
+                color: #666;
+                font-size: 20px;
+            }
+        
+            form {
+                input,
+                textarea {
+                    font-size: 18px;
+                    background-color: #fff;
+                    box-shadow: none;
+                    border: none;
+                    border-bottom: 1px solid #e75333;
+                    border-radius: 0;
+                    line-height: 1.2;
+                    margin-bottom: 25px;
+                    padding: 8px;
+                    width: 100%;
+                    height: 50px;
+                }
+    
+                textarea {
+                    width: 100%;
+                    min-height: 150px;
+                    resize: none;
+                    border-radius: 5px;
+                    border: 1px solid #e75333;
+                    margin: 0;
+                }
+    
+                button {
+                    background: #00cc66;
+                    border: none;
+                    padding: 8px 20px;
+                    font-size: 17px;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    transition: all 0.5s;
+    
+                    &:hover {
+                        background-color: #0fa85c;
+                    }
+                }
+            }
+    
+        }
+    
+        .map {
+ 
+            
+        }
+
+    }
+
+
+
+}

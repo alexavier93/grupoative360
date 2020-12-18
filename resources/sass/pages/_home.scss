@@ -1,0 +1,43 @@
+#home {
+    /*
+About us Style
+======================================================*/
+    .about-us {
+        p {
+            color: #666666;
+        }
+    }
+
+    /*
+Serviços
+======================================================*/
+    .servicos {
+        .servico {
+            text-align: center;
+            padding: 20px;
+
+            h3 {
+                color: #999999;
+                font-family: "Signika", sans-serif;
+                text-transform: uppercase;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    /*
+Sustentabilidade Style
+======================================================*/
+    .sustentabilidade {
+        background-color: #080d3d;
+
+        p {
+            color: #fff;
+        }
+    }
+
+
+}

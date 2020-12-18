@@ -1,0 +1,71 @@
+.bg-blue {
+    background-color: $primarycolor !important;
+}
+.bg-orange {
+    background-color: $secondcolor !important;
+}
+
+.title-section {
+    h2 {
+        font-size: 50px;
+        font-family: "Signika", sans-serif;
+        color: $secondcolor;
+        margin-bottom: 20px;
+        font-weight: 700;
+        position: relative;
+        display: block;
+    }
+}
+
+.title-section-center {
+    max-width: 660px;
+    margin: -8px auto 60px;
+    text-align: center;
+    position: relative;
+}
+
+.page-title-content {
+    background-color: $primarycolor;
+    text-align: left;
+    padding: 60px 0;
+
+    h1 {
+        color: #fff;
+        font-size: 55px;
+        font-family: "Signika", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    h5 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+
+        a {
+            color: #fff;
+        }
+
+        span {
+            font-size: 12px;
+            margin: 0 4px;
+        }
+    }
+}
+
+
+
+.btn-mais {
+    border: 2px solid $primarycolor;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: $primarycolor;
+        color: #fff;
+    }
+}

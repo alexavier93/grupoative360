@@ -1,0 +1,107 @@
+.contato-footer {
+
+    form {
+        input,
+        textarea {
+            font-size: 18px;
+            background-color: #fff;
+            box-shadow: none;
+            border: none;
+            border-bottom: 2px solid #e75333;
+            border-radius: 0;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            padding: 8px;
+            width: 100%;
+            height: 50px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            resize: none;
+            border-radius: 5px;
+            border: 2px solid #e75333;
+        }
+
+        button {
+            background: #00cc66;
+            border: none;
+            padding: 8px 20px;
+            font-size: 17px;
+            letter-spacing: 1px;
+            font-weight: 400;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: #0fa85c;
+            }
+        }
+    }
+}
+
+#footer {
+    background-color: $primarycolor;
+    color: #fff;
+
+    .contato {
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                list-style: none;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 300;
+
+                    i {
+                        color: #e75333;
+                        font-size: 16px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-media {
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                list-style: none;
+                margin: 0;
+                margin-right: 8px;
+                text-align: center;
+
+                a {
+                    font-size: 35px;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 0.25rem;
+                    transition: all 0.5s;
+
+                    i {
+                        color: #FFF;
+                        line-height: 36px;
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        color: #7eabca;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
