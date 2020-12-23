@@ -20,11 +20,16 @@
     }
 
     // Navbar Scroll Function
-    $(window).on('scroll', function () {
-        if ($(this).scrollTop() > 150) {
-            $('.navbar').addClass("fixed-menu");
-        } else {
-            $('.navbar').removeClass("fixed-menu");
+    var $window = $(window);
+    $window.scroll(function () {
+        var $scroll = $window.scrollTop();
+        var $navbar = $(".header-nav");
+        if (!$navbar.hasClass("sticky-bottom")) {
+            if ($scroll > 250) {
+                $navbar.addClass("fixed-menu");
+            } else {
+                $navbar.removeClass("fixed-menu");
+            }
         }
     });
 

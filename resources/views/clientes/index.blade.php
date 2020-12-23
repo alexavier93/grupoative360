@@ -21,41 +21,11 @@
 
                 <div class="row">
 
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/3m.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/colgate.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/samsung.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/tbmake.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/3m.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/colgate.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/samsung.png') }}">
-                    </div>
-
-                    <div class="col-md-3 text-center my-3">
-                        <img class="img-fluid w-75" src="{{ asset('assets/images/clientes/tbmake.png') }}">
-                    </div>
-
-
-
-
+                    @foreach ($clientes as $cliente)
+                        <div class="col-md-3 text-center my-3">
+                            <img class="img-fluid w-75" src="{{ asset('storage/' . $cliente->image) }}" alt="{{ $cliente->title }}" title="{{ $cliente->title }}">
+                        </div>
+                    @endforeach
 
                 </div>
 

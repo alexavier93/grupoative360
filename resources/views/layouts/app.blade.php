@@ -32,9 +32,9 @@
 
                     <div class="row">
 
-                        <div class="col-md-6 top-left"></div>
+                        <div class="col-md-6 col-sm-12 top-left"></div>
 
-                        <div class="col-md-6 top-right">
+                        <div class="col-md-6 col-sm-12 top-right">
                             <ul>
                                 <li>
                                     <a>
@@ -45,7 +45,7 @@
                                 <li>
                                     <a>
                                         <i class="fas fa-envelope"></i>
-                                        <span>jaison@grupoative360.com.br</span>
+                                        <span>contato@grupoative360.com.br</span>
                                     </a>
                                 </li>
                             </ul>
@@ -71,16 +71,16 @@
                     <div class="logo">
 
                         @if (route('home'))
-                            <a href="" class="logo-main">
+                            <a href="{{ route('home') }}" class="logo-main">
                                 <img src="{{ asset('assets/images/grupo-ative-360.png') }}" alt="">
                             </a>
                         @else
-                            <a href="" class="logo-main">
+                            <a href="{{ route('home') }}" class="logo-main">
                                 <img class="img-fluid" src="{{ asset('assets/images/grupo-ative-360.png') }}" alt="">
                             </a>
                         @endif
 
-                        <a href="" class="logo-fix">
+                        <a href="{{ route('home') }}" class="logo-fix">
                             <img class="img-fluid" src="{{ asset('assets/images/grupo-ative-360.png') }}" alt="">
                         </a>
 
@@ -250,14 +250,18 @@
 
             <div class="row">
 
-                <div class="col-lg-5 col-md-6">
-                    <a href="" class="logo-footer">
-                        <img class="img-fluid w-50" src="{{ asset('assets/images/grupo-ative-360-branco.png') }}"
-                            alt="">
+                <div class="col-lg-3 col-md-3">
+                    <a class="logo-footer">
+                        <img class="img-fluid" src="{{ asset('assets/images/grupo-ative-360-branco.png') }}" alt="Grupo Ative 360" title="Grupo Ative 360">
                     </a>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-3">
+                    <p>Avenida Padre Arlindo Vieira, 520 - Conj. 14 - Cep 04.297-000 - Vila Vermelha - São Paulo/SP</p>
+                </div>
+                
+
+                <div class="col-lg-3 col-md-3">
                     <div class="contato">
                         <ul>
                             <li>
@@ -269,7 +273,7 @@
                             <li>
                                 <a>
                                     <i class="fas fa-envelope"></i>
-                                    <span>jaison@grupoative360.com.br</span>
+                                    <span>contato@grupoative360.com.br</span>
                                 </a>
                             </li>
                         </ul>
@@ -277,14 +281,14 @@
 
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="social-media">
                         <ul>
                             <li>
-                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                <a href="https://www.facebook.com/grupoative360" target="_blank"><i class="fab fa-facebook-square"></i></a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="http://instagram.com/grupoative360" target="_blank"><i class="fab fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>

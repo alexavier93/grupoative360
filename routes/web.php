@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\ClienteController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ServicoController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -35,7 +37,19 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resources([
             'users' => UserController::class,
             'banners' => BannerController::class,
+            'servicos' => ServicoController::class,
+            'clientes' => ClienteController::class,
         ]);
+
+        // BANNERS
+        Route::prefix('servicos')->name('servicos.')->group(function(){
+            Route::post('/delete', [ServicoController::class, 'delete'])->name('delete');
+        });
+
+        // BANNERS
+        Route::prefix('clientes')->name('clientes.')->group(function(){
+            Route::post('/delete', [ClienteController::class, 'delete'])->name('delete');
+        });
 
         // BANNERS
         Route::prefix('banners')->name('banners.')->group(function(){
@@ -73,6 +87,7 @@ Route::prefix('quem-somos')->name('quemsomos.')->group(function(){
 
 Route::prefix('servicos')->name('servicos.')->group(function(){
     Route::get('/', [App\Http\Controllers\ServicoController::class, 'index'])->name('index');
+    Route::get('/info/{slug}', [App\Http\Controllers\ServicoController::class, 'info'])->name('info');
 });
 
 Route::prefix('clientes')->name('clientes.')->group(function(){

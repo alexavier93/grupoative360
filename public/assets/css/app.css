@@ -11099,7 +11099,7 @@ a.text-dark:focus {
 #header .header-nav .menu .nav ul li > a:hover {
   color: #e75333;
   border: 2px solid #e75333;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 #header .header-nav .sidemenu_btn {
@@ -11183,15 +11183,10 @@ a.text-dark:focus {
 
 #header .fixed-menu .menu .nav ul li > a {
   color: #1a3632;
-  line-height: 70px;
 }
 
 #header .fixed-menu .menu .nav ul li > a:before {
   background-color: #1a3632;
-}
-
-#header .fixed-menu .menu .portal-cliente {
-  line-height: 70px;
 }
 
 #header .fixed-menu .sidemenu_btn span {
@@ -11438,11 +11433,50 @@ a.text-dark:focus {
   About us Style
   ======================================================*/
   /*
+  About us Style
+  ======================================================*/
+  /*
   Serviços
   ======================================================*/
   /*
   Sustentabilidade Style
   ======================================================*/
+}
+
+#home .boxes {
+  position: relative;
+  margin-top: -100px;
+  z-index: 9;
+}
+
+#home .boxes .card {
+  border: none;
+  border-radius: 15px;
+  padding: 25px;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  box-shadow: 0px 11px 23px -4px rgba(0, 0, 0, 0.2);
+}
+
+#home .boxes .card:hover {
+  box-shadow: 0px 11px 23px -4px rgba(0, 0, 0, 0.25);
+}
+
+#home .boxes .card img {
+  width: 65%;
+  position: relative;
+  margin-top: -50px;
+}
+
+#home .boxes .card h3 {
+  color: #e75333;
+  font-family: "Signika", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 #home .about-us p {
@@ -11454,9 +11488,23 @@ a.text-dark:focus {
   padding: 20px;
 }
 
+#home .servicos .servico .icon-img {
+  background: #fff;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0px 11px 23px -4px rgba(0, 0, 0, 0.2);
+}
+
 #home .servicos .servico h3 {
   color: #999999;
   font-family: "Signika", sans-serif;
+  font-size: 28px;
   text-transform: uppercase;
   height: 60px;
   display: flex;
@@ -11495,6 +11543,78 @@ a.text-dark:focus {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+#servicos {
+  position: relative;
+}
+
+#servicos .content {
+  padding: 40px 0;
+}
+
+#servicos .content .segmentos .servico-image {
+  position: relative;
+  margin-top: -150px;
+}
+
+#servicos .content .segmentos .segmento {
+  text-align: center;
+}
+
+#servicos .content .segmentos .segmento img {
+  height: 200px;
+  margin: 25px auto;
+}
+
+#servicos .content .segmentos .segmento h3 {
+  color: #e75333;
+  font-family: "Signika", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#servicos .content .info .texto {
+  color: #666666;
+}
+
+#servicos .content .info .icon-img {
+  background: #fff;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin-top: -150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 9;
+  box-shadow: 0px 11px 23px -4px rgba(0, 0, 0, 0.2);
+}
+
+#servicos .content .info .outros-servicos .item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#servicos .content .info .outros-servicos .item .icon img {
+  width: 80px;
+}
+
+#servicos .content .info .outros-servicos .item .titulo {
+  line-height: 20px;
+  margin-left: 10px;
+}
+
+#servicos .content .info .outros-servicos .item .titulo h4 {
+  color: #080d3d;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Signika", sans-serif;
+  margin: 0;
 }
 
 #quem-somos {
@@ -11665,40 +11785,11 @@ a.text-dark:focus {
   #header .header-nav .menu .nav ul li > a {
     padding: 0 12px;
   }
-
-  #header .header-nav .contato {
-    padding: 0 30px 0 20px;
-  }
-
-  #header .header-nav .contato a .phone-box {
-    width: 35px;
-    height: 35px;
-  }
-
-  #header .header-nav .contato a .phone-box i {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 1200px) {
   #header .header-nav .contato {
     display: none;
-  }
-
-  #home .plantas {
-    background: #cc4847;
-  }
-
-  #home .localizacao .predio {
-    margin-top: -2px;
-  }
-
-  .barra-contato a .info .item-icon {
-    margin-right: 8px;
-  }
-
-  .barra-contato a .info .info-meta b {
-    font-size: 14px;
   }
 }
 
@@ -11711,16 +11802,27 @@ a.text-dark:focus {
     display: none;
   }
 
-  #home .localizacao .predio {
-    display: none;
+  #home .boxes .card h3 {
+    font-size: 20px;
   }
 
-  .barra-contato {
-    display: none;
+  #home .servicos .servico .icon-img {
+    width: 100%;
+    height: 100%;
   }
 
-  #footer {
-    margin-bottom: 0px;
+  #quem-somos .content ul li {
+    width: 49%;
+  }
+
+  #servicos .page-title-content h1 {
+    font-size: 40px;
+  }
+
+  #servicos .content .info .icon-img {
+    width: 275px;
+    height: 275px;
+    margin-top: -120px;
   }
 }
 
@@ -11735,46 +11837,35 @@ a.text-dark:focus {
     text-align: center;
   }
 
-  #home .banner-carousel .slide-item {
-    height: 400px;
-  }
-
-  #home .banner-section .contatos {
+  #home .boxes {
     margin-top: 0px;
-    display: block;
   }
 
-  #home .banner-section .contatos li {
-    width: 100%;
+  #home .boxes .card {
+    margin: 20px 0;
+  }
+
+  #home .boxes .card img {
+    margin-top: 0px;
+  }
+
+  #servicos .content .segmentos .servico-image {
+    margin-top: 20px;
+  }
+
+  #servicos .content .info .icon-img {
+    width: 150px;
+    height: 150px;
     margin: 0;
+    margin-bottom: 25px;
   }
 
-  #home .banner-section .contatos li a {
-    height: auto;
-    padding: 15px;
+  #servicos .content .info .outros-servicos .item .icon img {
+    width: 60px;
   }
 
-  #footer .footer-top .row {
-    flex-wrap: wrap;
-  }
-
-  #footer .footer-top .row .col-info {
-    width: 100%;
-  }
-}
-
-@media (max-width: 650px) {
-  #home .banner-carousel .content-box {
-    width: 100%;
-  }
-
-  #home .banner-carousel .content-box h2 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
-
-  #home .banner-carousel .content-box .btn-box {
-    top: 170px;
+  #servicos .content .info .outros-servicos .item .titulo h4 {
+    font-size: 14px;
   }
 }
 
@@ -11787,27 +11878,43 @@ a.text-dark:focus {
     width: 60%;
   }
 
-  #home .banner .form-busca {
-    margin-top: 100px;
-  }
-
-  #home .banner .slide-item {
-    padding: 0;
-    padding-top: 40px;
-  }
-
-  #home .depoimentos_home .depoimentos-carousel {
+  #quem-somos .content ul li {
     width: 100%;
-  }
-
-  #plantas .images .tab-content iframe {
-    height: 200px;
   }
 }
 
 @media (max-width: 450px) {
-  #home .contato_home .content-wrapper {
-    padding: 25px;
+  .page-title-content h1 {
+    font-size: 35px;
+  }
+
+  .title-section h2 {
+    font-size: 40px;
+  }
+
+  #header .header-nav .logo a img {
+    max-height: 50px;
+    max-width: inherit;
+  }
+
+  #home .servicos .servico .icon-img {
+    width: 180px;
+  }
+
+  #servicos .content .title-section h2 {
+    font-size: 36px;
+  }
+
+  #servicos .content .segmentos .servico-image {
+    margin-top: 0px;
+  }
+
+  #servicos .content .info .outros-servicos .item .icon img {
+    width: 70px;
+  }
+
+  #servicos .content .info .outros-servicos .item .titulo h4 {
+    font-size: 16px;
   }
 }
 

@@ -125,8 +125,10 @@
                     li > a:hover {
                         color: #e75333;
                         border: 2px solid #e75333;
-                        border-radius: 10px;
+                        border-radius: 8px;
                     }
+
+                
                 }
             }
         }
@@ -226,7 +228,6 @@
                 ul {
                     li > a {
                         color: #1a3632;
-                        line-height: 70px;
                         &:before {
                             background-color: #1a3632;
                         }
@@ -234,9 +235,6 @@
                 }
             }
 
-            .portal-cliente {
-                line-height: 70px;
-            }
         }
 
         .sidemenu_btn span {
@@ -483,8 +481,10 @@
                 &::after {
                     width: 100%;
                 }
+                
                 background: transparent;
             }
+
             .icons {
                 a {
                     color: #fff;

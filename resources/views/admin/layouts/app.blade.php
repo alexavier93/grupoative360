@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Painel Admin - Login</title>
+    <title>Painel Admin @yield('title')</title>
 
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('/assets/admin/css/styles.min.css') }}" rel="stylesheet">
@@ -52,35 +53,16 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Site
-            </div>
+            <div class="sidebar-heading">Site</div>
 
-            <!-- Nav Item - Produtos -->
+            <!-- Nav Item - Serviços -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#produtos"
-                    aria-expanded="true" aria-controls="produtos">
-                    <i class="fas fa-fw fa-boxes"></i>
-                    <span>Placas</span>
-                </a>
-                
-                <div id="produtos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('admin.placas.index') }}">Ver todas</a>
-                        <a class="collapse-item" href="{{ route('admin.modelos.index') }}">Modelos</a>
-                        <a class="collapse-item" href="{{ route('admin.molduras.index') }}">Molduras</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="{{ route('admin.servicos.index') }}"><i class="fas fa-cubes"></i><span>Serviços</span></a>
             </li>
 
-            <!-- Nav Item - Clientes -->
+            <!-- Nav Item - Serviços -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.customers.index') }}"><i class="fas fa-users"></i><span>Clientes</span></a>
-            </li>
-
-            <!-- Nav Item - Frases -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.frases.index') }}"><i class="fas fa-align-justify"></i><span>Frases</span></a>
+                <a class="nav-link" href="{{ route('admin.clientes.index') }}"><i class="fas fa-users"></i><span>Clientes</span></a>
             </li>
 
             <!-- Nav Item - Banners -->
@@ -108,46 +90,7 @@
 
             <!-- Nav Item - Users -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.users.index') }}"><i
-                        class="fas fa-users"></i><span>Usuários</span></a>
-            </li>
-
-
-
-            <!-- Nav Item - Configurações -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#config" aria-expanded="true"
-                    aria-controls="config">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Configurações</span>
-                </a>
-                <div id="config" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">Funções</a>
-                        <a class="collapse-item" href="">Permissões</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Item</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Itens 1:</h6>
-                        <a class="collapse-item" href="">Item 1.1</a>
-                        <a class="collapse-item" href="">Item 1.2</a>
-                        <a class="collapse-item" href="">Item 1.3</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Itens 2:</h6>
-                        <a class="collapse-item" href="">Item 2.1</a>
-                        <a class="collapse-item" href="">Item 2.2</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="{{ route('admin.users.index') }}"><i class="fas fa-user-friends"></i><span>Usuários</span></a>
             </li>
 
             <!-- Divider -->
@@ -173,124 +116,6 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Pedidos
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Dezembro 20, 2020</div>
-                                        <span class="font-weight-bold">Existe um novo pedido!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Dezembro 20, 2020</div>
-                                        <span class="font-weight-bold">Existe um novo pedido!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">Dezembro 20, 2020</div>
-                                        <span class="font-weight-bold">Existe um novo pedido!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todos os pedidos</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Mensagens
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60"
-                                            alt="">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam provident harum temporibus!</div>
-                                        <div class="small text-gray-500">Emily Fowler · Dezembro 20, 2020</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60"
-                                            alt="">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · Dezembro 20, 2020</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60"
-                                            alt="">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · Dezembro 20, 2020</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · Dezembro 20, 2020</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas as mensagens</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -382,6 +207,8 @@
     <!-- Core plugin JavaScript-->
     <script src="{{ asset('/assets/admin/vendor/jquery-easing/jquery.easing.min.js') }} "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/lang/summernote-pt-BR.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('/assets/admin/js/scripts.min.js') }}"></script>

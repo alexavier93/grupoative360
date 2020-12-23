@@ -39,6 +39,8 @@
                                         <h1 class="h4 text-gray-900 mb-4">Painel Admin</h1>
                                     </div>
 
+                                    @include('flash::message')
+
                                     <form class="user" method="POST" action="{{ route('admin.do_login') }}">
 
                                         @csrf

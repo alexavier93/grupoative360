@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Servico;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,8 +27,9 @@ class HomeController extends Controller
     {
 
         $banners = Banner::all();
-
-        return view('home.index', compact('banners'));
+        $servicos = Servico::all();
+        
+        return view('home.index', compact('banners', 'servicos'));
 
     }
 }

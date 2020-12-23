@@ -36,6 +36,9 @@ php artisan make:controller Admin\UserController --resource
 // Resize images
 composer require intervention/image
 
+// Criar pasta storage publica
+php artisan storage:link
+
 
 
 

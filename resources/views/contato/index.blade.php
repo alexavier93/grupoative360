@@ -87,7 +87,7 @@
                     </div>
     
                     <div class="col-xl-6 col-md-12 col-sm-12 my-4 map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2043.5943623327194!2d-46.770224454080804!3d-22.193217917013218!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcecb9bf1ebbe382d!2sEspal%20Personalizados!5e0!3m2!1spt-BR!2sbr!4v1607213076414!5m2!1spt-BR!2sbr" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10796.75678630405!2d-46.60752412275998!3d-23.62612529163361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5b65e0a5517d%3A0x17f2e32b58769acc!2sAv.%20Padre%20Arlindo%20Vieira%2C%20520%20-%20Vila%20Vermelha%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004297-000!5e0!3m2!1spt-BR!2sbr!4v1608651687148!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
     
                 </div>
